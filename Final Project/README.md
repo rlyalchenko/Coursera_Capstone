@@ -53,10 +53,10 @@ GeoJSON data of neighborhhods is availabe under link
 https://data.cityofnewyork.us/api/geospatial/tqmj-j8zm?method=export&format=GeoJSON.
 It contains borders for each neighborhhods border as "MultiPolygon" in GeoJSON format
 
-## 2.4 NYC Neighborhoods
+## 2.4 NYC Boroghs
 I will use open source information that is available via link
 https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/ArcGIS/rest/services/NYC_Neighborhood_Tabulation_Areas/FeatureServer/0/query?where=1=1&outFields=*&outSR=4326&f=pgeojson
-The file contains data of NYC neighborhoods borders in GeoJSON format.
+The file contains data of NYC Boroghs borders in GeoJSON format.
 
 ## 2.5 Crime dataset
 This dataset includes all valid felony, misdemeanor, and violation crimes reported 
@@ -222,7 +222,7 @@ nyc_map.choropleth(
 ```
 ![Main dataset](https://github.com/rlyalchenko/Coursera_Capstone/blob/master/Final%20Project/Report/Images/Clustered.png?raw=true)
 # 7 Results and Discussion
-During my research I used open spurce data from official resources. I used formal data science methonds to clean and process data. All results of my work are available on GitHub. 
+During my research I used open source data from official resources. I used formal data science methonds to clean and process data. All results of my work are available on GitHub. 
 
 The analysis shows, that density of groccery stores in NYC vary a lot. There are a lot of areas, that lack such kind of facility.
 In the research I did not focus on a certain part of city, but wanted to make high level analysis, that can be used as first step in deepere reaserches.
