@@ -19,9 +19,9 @@ I will try to determine areas where new grocery store. Good location criteria ar
 The main stakeholders of my research are investors, who want to start new business or
 extend their current one.
 
-# Data
+# 2 Data
 
-## Requirements
+## 2.1 Requirements
 
 Problem research requires following type of information:
 1. NYC boroughs:
@@ -33,7 +33,7 @@ Problem research requires following type of information:
 1. List of venues
 1. Official crime information for NYC
 
-## Foursquare API
+## 2.2 Foursquare API
 I will utilize this data source to export information about venues in borders of each 
 NYC borough.
 
@@ -46,14 +46,19 @@ API provides a lot of information about venues and includes:
 - Longitude
 - Categories
 
-## NYC Boroughs
+## 2.3 NYC Boroughs
 I will use open source infromation that is published on site 
 https://opendata.cityofnewyork.us/
 GeoJSON data of boriughs is availabe under link 
 https://data.cityofnewyork.us/api/geospatial/tqmj-j8zm?method=export&format=GeoJSON.
 It contains borders for each borough border as "MultiPolygon" in GeoJSON format
 
-## Crime dataset
+## 2.4 NYC Neighborhoods
+I will use open source information that is available via link
+https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/ArcGIS/rest/services/NYC_Neighborhood_Tabulation_Areas/FeatureServer/0/query?where=1=1&outFields=*&outSR=4326&f=pgeojson
+The file contains data of NYC neighborhoods borders in GeoJSON format.
+
+## 2.5 Crime dataset
 This dataset includes all valid felony, misdemeanor, and violation crimes reported 
 to the New York City Police Department (NYPD) for all complete quarters 
 so far this year (2019):
