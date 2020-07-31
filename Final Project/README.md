@@ -156,7 +156,7 @@ for row in crimeDF.itertuples():
 neighborhoodsDF.to_csv("data/output/neighboors.csv") 
 ````
 ### Resulted dataset
-![Main dataset](Report/images/dataset_main.png)
+![Main dataset](https://github.com/rlyalchenko/Coursera_Capstone/blob/master/Final%20Project/Report/Images/dataset_main.png?raw=true)
 
 # 4 Methodology
 We are going to identify neighboorhoods in NYC that lack groccery facilities.
@@ -177,7 +177,7 @@ Adding additional information in dataset: crime density and stores density
 neighborhoodsDF["StoreDensity"] = neighborhoodsDF["NumberOfStores"] / neighborhoodsDF["Area"]
 neighborhoodsDF["CrimeDensity"] = neighborhoodsDF["NumberOfCrimes"] / neighborhoodsDF["Area"]
 `````
-![Main dataset](Report/images/dataset_main_norm.png)
+![Main dataset](https://github.com/rlyalchenko/Coursera_Capstone/blob/master/Final%20Project/Report/Images/dataset_main_norm.png?raw=true)
 
 The core of our analysis is K-Means clustering method. We will use it to split all
 neighboors into several groups with similar features.
@@ -188,7 +188,7 @@ kclusters = 5
 kmeans = KMeans(n_clusters=kclusters, random_state=0).fit(clusteringDF)
 neighborhoodsDF.insert(0, "ClusterLabel", kmeans.labels_)
 ``````
-![Main dataset](Report/images/dataset_main_clustered.png)
+![Main dataset](https://github.com/rlyalchenko/Coursera_Capstone/blob/master/Final%20Project/Report/Images/dataset_main_clustered.png?raw=true)
 We can now see, that  most interesting areas for us are located in clusters with labels 1 and 3.
 We add Rank column, that will show how interesting areas are for out investors.
 ``````
@@ -200,7 +200,7 @@ neighborhoodsDF.loc[neighborhoodsDF.ClusterLabel == 2, "Rank"] = 2
 neighborhoodsDF.loc[neighborhoodsDF.ClusterLabel == 4, "Rank"] = 1
 neighborhoodsDF.head()
 ``````
-![Main dataset](Report/images/dataset_main_ranked.png)
+![Main dataset](https://github.com/rlyalchenko/Coursera_Capstone/blob/master/Final%20Project/Report/Images/dataset_main_ranked.png?raw=true)
 # 6 Visualisation
 For visualisation purposes we will be using folium library. 
 
@@ -220,7 +220,7 @@ nyc_map.choropleth(
     legend_name='Grocery capabilities'
 )
 ```
-![Main dataset](Report/images/Clustered.png)
+![Main dataset](https://github.com/rlyalchenko/Coursera_Capstone/blob/master/Final%20Project/Report/Images/Clustered.png?raw=true)
 # 7 Results and Discussion
 During my research I used open spurce data from official resources. I used formal data science methonds to clean and process data. All results of my work are available on GitHub. 
 
